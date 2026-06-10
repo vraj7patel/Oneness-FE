@@ -1,0 +1,353 @@
+.about-us-section {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 80px 0 0 0;
+  background-color: #ffffff;
+  overflow: visible;
+  overflow-x: hidden;
+  font-family: 'Georgia', serif;
+}
+
+.about-us-bg-text {
+  position: absolute;
+  top: 30px;
+  right: 16px;
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-weight: 900;
+  color: #E3D8C4;
+  z-index: 1;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  /* transform: rotate(-2deg); */
+  pointer-events: none;
+}
+
+.about-us-bg-text .about {
+  font-size: 100px;
+  transform: translateY(40px);
+}
+
+.about-us-bg-text .us {
+  font-size: 100px;
+  transform: translateY(0px);
+  margin-left: -10px;
+}
+
+.about-us-container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.about-us-left {
+  flex: 1;
+  padding-right: 50px;
+  padding-top: 60px;
+  position: relative;
+}
+
+.about-us-heading {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 28px;
+  color: #c96b34;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.about-us-divider {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.about-us-divider img {
+  height: 20px;
+  width: auto;
+}
+
+.about-us-desc {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.about-us-strong {
+  color: #333;
+  font-weight: bold;
+}
+
+.about-us-actions {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.btn-stay-informed {
+  position: relative;
+  background-color: #4B3A70;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 2px #4B3A70;
+}
+
+.btn-stay-informed .corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: -5px;
+}
+
+.btn-stay-informed .top-left {
+  top: -5px;
+}
+
+.btn-stay-informed .bottom-left {
+  bottom: -5px;
+}
+
+.btn-contact-us {
+  background-color: #ffffff;
+  color: #4B3A70;
+  border: 1px solid #4B3A70;
+  padding: 12px 25px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-stay-informed:hover,
+.btn-contact-us:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.about-us-sketch-container {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: -50px;
+  /* pull sketch to left edge */
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-us-sketch {
+  margin-left: -57px;
+  width: 122%;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+
+ filter:
+        grayscale(1)
+        sepia(1)
+        saturate(25)
+        hue-rotate(320deg)
+        brightness(0.9)
+        contrast(1.2);
+
+    opacity: 0.95;
+
+  /* mix-blend-mode: multiply; */
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+
+.buildings-outline {
+  width: 245%;
+ 
+  height: auto;
+  display: block;
+  /* opacity: 0.89; */
+  mix-blend-mode: multiply;
+  background: transparent;
+  /*  flex-shrink: 0; */
+  margin-left: -781px;
+  /* filter:
+        grayscale(1)
+        sepia(1)
+        saturate(25)
+        hue-rotate(320deg)
+        brightness(0.9)
+        contrast(1.2);
+
+    opacity: 0.95; */
+
+  /* opacity: 1.28; */ 
+}
+
+.about-us-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-illustration-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.colorful-art-img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin-top: -80px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/* Bottom outline moved to left sketch container */
+
+@media (max-width: 992px) {
+  .about-us-section {
+    padding: 60px 0 30px 0; /* Reduced bottom padding to remove empty gap */
+  }
+
+  .about-us-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .about-us-left {
+    padding-right: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-heading {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .about-us-divider {
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-us-divider img {
+    margin: 0 auto;
+  }
+
+  .about-us-desc {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-us-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .btn-stay-informed,
+  .btn-contact-us {
+    width: auto;
+    max-width: none;
+    padding: 12px 18px;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .btn-contact-us {
+    background-color: #ffffff; /* Solid white background on mobile to hide the background line sketches */
+  }
+
+  .about-us-sketch-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .about-us-sketch {
+    width: 100%;
+    margin-left: 0;
+    opacity: 0.15;
+  }
+
+  .buildings-outline {
+    width: 100%;
+    margin-left: 0;
+    opacity: 0.15;
+  }
+
+  .about-us-bg-text {
+    top: 20px;
+    right: 20px;
+  }
+
+  .about-us-bg-text .about,
+  .about-us-bg-text .us {
+    font-size: 60px;
+    transform: none;
+  }
+
+  .about-us-bg-text .us {
+    margin-left: 8px;
+  }
+
+  .about-us-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-bg-text {
+    top: 15px;
+    right: 15px;
+  }
+
+  .about-us-bg-text .about,
+  .about-us-bg-text .us {
+    font-size: 42px;
+  }
+}

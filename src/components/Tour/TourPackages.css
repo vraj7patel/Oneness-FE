@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.tour-packages-section {
+  position: relative;
+  background-color: #4FB6C1;
+  /* Teal background */
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tp-brush-top {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  z-index: 2;
+}
+
+.tp-brush-bottom {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.tp-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: min(94vw, 1100px);
+  z-index: 5;
+}
+
+/* .tp-pillar {
+  width: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+} */
+
+.tp-pillar-left {
+  /* Left pillar specific styles */
+  width: 138px;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+  left: 30px;
+}
+
+.tp-pillar-right {
+  /* Right pillar specific styles */
+  width: 138px;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+  right: 30px;
+}
+
+.tp-content-wrapper {
+  flex-grow: 1;
+  background: linear-gradient(180deg, #5D4E8C 0%, #3A2E5A 100%);
+  margin: 40px -20px;
+  padding: 60px 80px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+}
+
+.tp-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #FFFFFF;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tp-table th {
+  background-color: #8C638C;
+  /* Muted magenta header color from image */
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.tp-table td {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Visible vertical/horizontal borders */
+  vertical-align: middle;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Subtle row shading */
+}
+
+.tp-pkg-type {
+  font-weight: 700;
+  color: #FFFFFF;
+  width: 28%;
+}
+
+/* Button */
+.tp-btn-container {
+  margin-top: auto;
+}
+
+.tp-btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tp-reserve-btn {
+  background-image: url('../../assets/pkg-btn/Group 60 (3).png');
+  background-size: 100% 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 12px 50px;
+  font-family: 'Irish Grover', cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  min-width: 320px;
+  min-height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.tp-reserve-btn:hover {
+  transform: translateY(-2px);
+}
+
+.tp-btn-ornament {
+  display: none;
+}
+
+.tp-orn-tl {
+  top: -6px;
+  left: -6px;
+}
+
+.tp-orn-tr {
+  top: -6px;
+  right: -6px;
+}
+
+.tp-orn-bl {
+  bottom: -6px;
+  left: -6px;
+}
+
+.tp-orn-br {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .tp-pillar-left {
+    left: 10px;
+  }
+
+  .tp-pillar-right {
+    right: 10px;
+  }
+
+  .tp-content-wrapper {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-pillar {
+    display: none;
+    /* Hide pillars on small tablets/mobile */
+  }
+
+  .tp-content-wrapper {
+    margin: 20px 10px;
+    padding: 30px 15px;
+    width: 100%;
+  }
+
+  /* Note: In JSX, wrap table in <div className="tp-table-container"> */
+  .tp-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+  }
+
+  .tp-table {
+    min-width: 600px;
+  }
+
+  .tp-table th {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .tp-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tp-table {
+    min-width: 500px;
+  }
+
+  .tp-reserve-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

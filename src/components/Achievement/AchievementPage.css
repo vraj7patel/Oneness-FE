@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:wght@400;700&display=swap');
+
+/* ── HERO SECTION ── */
+.ach-hero {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.ach-hero-bg-culture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.ach-hero-bg-award {
+     position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 114%;
+    -o-object-fit: cover;
+    top: -95px;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    z-index: 2;
+    opacity: 1;
+}
+
+.ach-hero-overlay {
+  position: absolute;
+  inset: 0;
+ background: linear-gradient(179deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 100%);
+  z-index: 3;
+}
+
+.ach-hero-mask-top {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.ach-hero-mask-bottom {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+
+.ach-hero-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin-top: 333px;
+}
+
+.ach-hero-title-top {
+  font-family: "Irish Grover", cursive;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.ach-hero-glance {
+  font-family: "Irish Grover", cursive;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
+.ach-hero-title {
+  font-family: "Irish Grover", cursive;
+  font-size: clamp(32px, 8vw, 61px);
+  /* color: #D4AF37; */
+  color: #cc9309; /* Gold color */
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 2px #b8860b,
+    0 0 5px #ffd700,
+    0 0 10px #ffec8b;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.ach-hero-sub {
+  font-family: "Roboto Serif", serif;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.4;
+  max-width: 850px;
+  margin: 0 auto;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* ── INFO & STATS SECTION ── */
+.info-stats-section {
+   mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 1) 10%
+  );
+  padding: 60px 40px 100px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 1) 50%
+  );
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.section-title-top {
+  font-family: "Irish Grover", cursive;
+  font-size: 26px;
+  color: #B5451B;
+  margin-bottom: 2px;
+  letter-spacing: 1.5px;
+}
+
+.section-title-main {
+  font-family: "Irish Grover", cursive;
+  font-size: 32px;
+  color: #7D4F38;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.divider-img {
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.main-layout-grid {
+  margin-top: 50px;
+  display: flex;
+  gap: 65px;
+  width: 100%;
+  max-width: 1240px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Left Side: Stacking text boxes */
+.left-content-stack {
+  flex: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text-box {
+  background: #fff;
+  border: 1px solid rgba(145, 139, 174, 0.25);
+  border-left: 4px solid #4A3B8B;
+  border-right: 4px solid #4A3B8B;
+  border-radius: 6px;
+  padding: 14px 22px;
+  font-family: "Roboto Serif", serif;
+  font-size: 12.8px;
+  color: #2c2c2c;
+  line-height: 1.55;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+
+.text-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Right Side: Staggered Stats Arrangement */
+.right-stats-masonry {
+  flex: 1;
+  position: relative;
+  max-width: 480px;
+  align-self: flex-start;
+  margin-top: 0px;
+}
+
+.stats-group-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stat-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  width: 180px;
+  transform: translate(-50%, -50%);
+}
+
+/* Value (Number) Specific Styling */
+.stat-val-base {
+  font-family: "Irish Grover", cursive;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.stat-val-0 { font-size: 34px; margin-bottom: 6px; }
+.stat-val-1 { font-size: 34px; margin-bottom: 4px; }
+.stat-val-2 { font-size: 23px; margin-bottom: 6px; line-height: 1.1; }
+.stat-val-3 { font-size: 23px; margin-bottom: 6px; line-height: 1.1; }
+.stat-val-4 { font-size: 34px; margin-bottom: 8px; }
+
+/* Label Specific Styling */
+.stat-lab-base {
+  font-family: "Roboto Serif", serif;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.stat-lab-0 { font-size: 10.5px; max-width: 110px; }
+.stat-lab-1 { font-size: 10.5px; max-width: 110px; }
+.stat-lab-2 { font-size: 10.5px; max-width: 120px; }
+.stat-lab-3 { font-size: 10.5px; max-width: 120px; }
+.stat-lab-4 { font-size: 10.5px; max-width: 120px; }
+
+/* Precise Overlay Positions on Group 111.png */
+.stat-pos-0 { top: 14.5%; left: 27.5%; }    /* Yellow */
+.stat-pos-1 { top: 31.5%; left: 72.2%; }    /* Brown */
+.stat-pos-2 { top: 44.5%; left: 27.5%; }    /* Purple */
+.stat-pos-3 { top: 61.5%; left: 71.8%;}    /* Beige */
+.stat-pos-4 { top: 73.5%; left: 27.5%;}    /* Green */
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .main-layout-grid { flex-direction: column; align-items: center; gap: 60px; }
+  .left-content-stack { width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu { display: block; }
+  .info-stats-section { padding: 60px 20px; }
+  .section-title-main { font-size: 28px; }
+  .stat-item { width: 200px; height: 230px; }
+  .stat-num { font-size: 32px; }
+
+  .ach-hero { height: 60vh; }
+  .ach-hero-title-top { font-size: 20px; }
+  .ach-hero-glance { font-size: 16px; margin-bottom: 20px; }
+
+  .stat-overlay { width: 120px; }
+  .stat-val-0, .stat-val-1 { font-size: 26px; }
+  .stat-val-2, .stat-val-3 { font-size: 18px; }
+  .stat-val-4 { font-size: 26px; }
+  .stat-lab-0, .stat-lab-1, .stat-lab-2, .stat-lab-3, .stat-lab-4 {
+    font-size: 9px;
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-overlay { width: 100px; }
+  .stat-val-0, .stat-val-1 { font-size: 20px; }
+  .stat-val-2, .stat-val-3 { font-size: 16px; }
+  .stat-val-4 { font-size: 20px; }
+  .stat-lab-0, .stat-lab-1, .stat-lab-2, .stat-lab-3, .stat-lab-4 {
+    font-size: 8px;
+    max-width: 80px;
+  }
+  .right-stats-masonry { max-width: 100%; }
+  .section-title-main { font-size: 22px; }
+  .section-title-top { font-size: 20px; }
+  .text-box { padding: 10px 14px; font-size: 11.5px; }
+}

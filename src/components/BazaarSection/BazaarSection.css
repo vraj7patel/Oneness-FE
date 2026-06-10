@@ -1,0 +1,482 @@
+/* ===== CURATED CONSCIOUS BAZAAR SECTION ===== */
+.bazaar-section {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #359b8c;
+  /* Dark teal background */
+  overflow: visible;
+  /* Changed to visible to let waves overlap next section */
+  z-index: 5;
+  /* Position on top of the next blog section */
+  font-family: 'Georgia', serif;
+  padding-top: 110px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+/* Container to hide horizontal overflow of mandalas while section is overflow: visible */
+.bazaar-mandala-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --- Top brush (transition from dark top section) --- */
+.bazaar-brush-top {
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  object-position: bottom center;
+  pointer-events: none; */
+  top: 0px;
+  position: absolute;
+  z-index: 4;
+  width: 101%;
+  height: 100px;
+  /* -o-object-fit: cover; */
+  /* object-fit: cover; */
+  /* -o-object-position: bottom center; */
+  /* object-position: bottom center; */
+  pointer-events: none;
+}
+
+/* --- Background mandala watermarks --- */
+.bazaar-bg-mandala {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  opacity: 0.08;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bazaar-mandala-left {
+  top: 25%;
+  left: -80px;
+}
+
+.bazaar-mandala-right {
+  top: 40%;
+  right: -80px;
+}
+
+/* --- Container --- */
+.bazaar-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header --- */
+.bazaar-header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.bazaar-title {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.bazaar-title-divider {
+  width: min(220px, 60vw);
+  height: auto;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.bazaar-subtitle {
+  font-size: clamp(13px, 1.1vw, 16px);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.3px;
+}
+
+/* ===== CARDS LAYOUT ===== */
+.bazaar-cards-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+/* Columns */
+.bazaar-col {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.bazaar-col-left {
+  align-items: flex-end;
+}
+
+.bazaar-col-center {
+  align-items: center;
+}
+
+.bazaar-col-right {
+  align-items: flex-start;
+}
+
+/* ===== INDIVIDUAL CARD ===== */
+.bazaar-card {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.2));
+}
+
+/* .bazaar-card:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.3));
+} */
+
+/* Frame image defines the card shape */
+.bazaar-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Content overlay on top of frame */
+.bazaar-card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 155px 20px 26px;
+  /* Optimized padding top to fit larger centered circle images */
+  box-sizing: border-box;
+}
+
+/* Card title */
+.bazaar-card-title {
+  color: #ffffff;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin: 0 auto 12px;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  max-width: 90%;
+}
+
+/* Card button - Clean High-Contrast White Pill Shape */
+.bazaar-card-btn {
+  background: #ffffff;
+  color: #1a1a1a;
+  /* High-contrast dark charcoal text as in mockup */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  /* Pill shape */
+  padding: 8px 22px;
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  letter-spacing: 0.3px;
+}
+
+/* .bazaar-card-btn:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+} */
+
+/* ===== CIRCLE IMAGES ===== */
+/* Perfectly centered, enlarged, and nested within the top arch frame */
+.bazaar-circle-img {
+  position: absolute;
+  top: 11px;
+  /* Perfectly aligned vertically with the dome viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 132px;
+  /* Enlarged to fill the frame arch nicely */
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+
+
+/* ===== CENTER CARD (larger) ===== */
+.bazaar-card-center {
+  width: 330px;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.22));
+}
+
+.center-overlay {
+  padding: 180px 25px 36px;
+}
+
+/* Nicolas person image inside the center arch */
+.bazaar-nicolas-img {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: auto;
+  max-height: 52%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+  /* transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
+}
+
+/* .bazaar-card-center:hover .bazaar-nicolas-img {
+  transform: translateX(-50%) scale(1.04);
+} */
+
+.title-center {
+  font-size: 21px;
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+}
+
+.btn-center {
+  padding: 10px 28px;
+  font-size: 12px;
+}
+
+/* ===== BOTTOM WAVES ===== */
+.bazaar-waves-graphic {
+  position: absolute;
+  bottom: -160px;
+  /* Adjusted to keep waves visible and overlapping */
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+  /* Below the cards and container (z-index: 2) but on top of next section */
+  pointer-events: none;
+}
+
+.bazaar-waves-bottom {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  margin-top: -12px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1100px) {
+  .bazaar-cards-layout {
+    gap: 25px;
+  }
+
+  .bazaar-card {
+    width: 210px;
+  }
+
+  .bazaar-card-overlay {
+    padding: 130px 15px 22px;
+  }
+
+  .bazaar-circle-img {
+    width: 112px;
+    height: 112px;
+    top: 9px;
+    border-width: 3px;
+  }
+
+  .bazaar-card-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .bazaar-card-btn {
+    padding: 6px 18px;
+    font-size: 10px;
+  }
+
+  /* Center Card scaling */
+  .bazaar-card-center {
+    width: 280px;
+  }
+
+  .center-overlay {
+    padding: 150px 20px 30px;
+  }
+
+  .title-center {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .btn-center {
+    padding: 8px 22px;
+    font-size: 11px;
+  }
+
+  .bazaar-waves-graphic {
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 850px) {
+  .bazaar-section {
+    padding-top: 90px;
+  }
+
+  .bazaar-cards-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bazaar-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .bazaar-col-left,
+  .bazaar-col-right {
+    align-items: center;
+  }
+
+  .bazaar-col-center {
+    order: -1;
+    /* Keep Natural Wellness at the top on mobile */
+  }
+
+  .bazaar-card {
+    width: 230px;
+  }
+
+  .bazaar-card-overlay {
+    padding: 140px 18px 24px;
+  }
+
+  .bazaar-circle-img {
+    width: 122px;
+    height: 122px;
+    top: 10px;
+  }
+
+  .bazaar-card-center {
+    width: 300px;
+  }
+
+  .center-overlay {
+    padding: 160px 22px 32px;
+  }
+
+  .bazaar-waves-graphic {
+    bottom: -80px;
+    height: 180px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+@media (max-width: 520px) {
+  .bazaar-col {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .bazaar-col-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bazaar-card {
+    width: 155px;
+  }
+
+  .bazaar-card-overlay {
+    padding: 100px 10px 15px;
+  }
+
+  .bazaar-circle-img {
+    width: 85px;
+    height: 85px;
+    top: 7px;
+  }
+
+  .bazaar-card-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .bazaar-card-btn {
+    padding: 4px 10px;
+    font-size: 8px;
+  }
+
+  .bazaar-card-center {
+    width: 280px;
+  }
+
+  .center-overlay {
+    padding: 140px 15px 25px;
+  }
+
+  .title-center {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .btn-center {
+    padding: 8px 22px;
+    font-size: 11px;
+  }
+
+  .bazaar-waves-graphic {
+    bottom: -50px;
+    height: 130px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}

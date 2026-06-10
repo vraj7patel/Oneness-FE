@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+.accommodation-booking-section {
+  padding: 100px 24px;
+  background-color: #FAF9F6; /* Clean luxurious light cream background */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.accomm-booking-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Side: General Info and Tips */
+.accomm-booking-left {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+}
+
+.accomm-booking-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.guide-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 36px;
+  color: #2b1f1d;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.guide-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #554440;
+  margin: 0;
+}
+
+.guide-info-box {
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.guide-tips-box {
+  background-color: #eaf3f5; /* Premium soft blue tint */
+  border: 1px solid #d4e5e8;
+  border-bottom: 4px solid #4a919e;
+  border-right: 4px solid #4a919e;
+  color: #3b747e;
+}
+
+.guide-contact-box {
+  background-color: #f7ebec; /* Premium soft pink/red tint to match burgundy */
+  border: 1px solid #edd5d7;
+  border-bottom: 4px solid #aa3344;
+  border-right: 4px solid #aa3344;
+  color: #aa3344;
+}
+
+.box-title {
+  font-family: 'Roboto Serif', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: inherit;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: "✦";
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guide-list li {
+  padding-left: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.contact-detail {
+  font-family: 'Roboto Serif', serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333333;
+}
+
+/* Right Side: Layered Frame Form */
+.accomm-booking-right {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.booking-layered-frame {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08));
+}
+
+.booking-vector-outer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.booking-vector-inner {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.booking-form-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.booking-form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.booking-form-logo {
+  width: 110px;
+  margin-bottom: 12px;
+}
+
+.booking-form-subtitle {
+  font-family: 'Irish Grover', cursive;
+  font-size: 22px;
+  color: #2b1f1d;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Booking Form Elements */
+.booking-form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-group label {
+  font-family: 'Roboto Serif', serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #665550;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.booking-group input,
+.booking-group select,
+.booking-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ebdcd9;
+  border-radius: 8px;
+  background-color: #FAF9F6;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #333333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.booking-group input:focus,
+.booking-group select:focus,
+.booking-group textarea:focus {
+  border-color: #aa3344;
+  box-shadow: 0 0 0 3px rgba(170, 51, 68, 0.08);
+}
+
+.booking-row {
+  display: flex;
+  gap: 16px;
+}
+
+.booking-row .booking-group {
+  flex: 1;
+}
+
+.booking-group textarea {
+  height: 90px;
+  resize: none;
+}
+
+.booking-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.booking-submit-btn {
+  background-image: url('../../assets/pkg-btn/Group 58.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-family: 'Irish Grover', cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  min-width: 250px;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.booking-submit-btn:hover {
+  /* removed hover effect */
+}
+
+.booking-submit-btn:active {
+  /* removed active effect */
+}
+
+/* Success message layout */
+.booking-success-message {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #F8B12F;
+  margin-bottom: 16px;
+  /* removed animation */
+}
+
+.booking-success-message h4 {
+  font-family: 'Irish Grover', cursive;
+  font-size: 28px;
+  color: #aa3344;
+  margin: 0 0 12px 0;
+}
+
+.booking-success-message p {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #554440;
+  margin-bottom: 24px;
+}
+
+.inquire-again-btn {
+  padding: 10px 24px;
+  background-color: #aa3344;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Irish Grover', cursive;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inquire-again-btn:hover {
+  /* removed hover effect */
+}
+
+/* Responsive formatting */
+@media (max-width: 992px) {
+  .accomm-booking-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .accomm-booking-left {
+    position: static;
+    width: 100%;
+  }
+  .accomm-booking-right {
+    width: 100%;
+  }
+  .booking-layered-frame {
+    max-width: 100%;
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .accommodation-booking-section {
+    padding: 60px 16px;
+  }
+  .booking-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .booking-layered-frame {
+    padding: 50px 16px;
+  }
+  .booking-submit-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}

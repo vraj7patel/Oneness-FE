@@ -1,0 +1,212 @@
+.teacher-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: -2px;
+}
+
+.teacher-hero-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Brush / torn-edge borders (white) */
+.teacher-brush-edge {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  background-image: url('../../assets/hero-bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+  filter: brightness(0) invert(1);
+}
+
+.teacher-brush-top {
+  top: -20px;
+  transform: rotate(180deg);
+}
+
+.teacher-brush-bottom {
+  bottom: -2px;
+}
+
+/* Main content */
+.teacher-hero-content {
+  position: relative;
+  z-index: 4;
+  color: #ffffff;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacher-hero-subtitle {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 1.3;
+}
+
+.teacher-hero-year {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.teacher-hero-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 45px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  line-height: 1.15;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Book Ticket Button */
+.teacher-book-btn-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.teacher-book-btn {
+  font-family: 'Irish Grover', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 2px solid #1a1a1a;
+  padding: 14px 40px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.teacher-book-btn:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative element near button */
+.teacher-btn-decor {
+  position: absolute;
+  bottom: -12px;
+  left: -16px;
+  width: 36px;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .teacher-hero-section {
+    height: 80vh;
+    min-height: 550px;
+  }
+
+  .teacher-hero-title {
+    font-size: 48px;
+  }
+
+  .teacher-hero-subtitle,
+  .teacher-hero-year {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-hero-section {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .teacher-hero-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .teacher-hero-subtitle,
+  .teacher-hero-year {
+    font-size: 22px;
+  }
+
+  .teacher-book-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+
+  .teacher-brush-edge {
+    height: 100px;
+  }
+
+  .teacher-brush-bottom {
+    bottom: -3px;
+    height: 75px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-hero-section {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .teacher-hero-title {
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
+
+  .teacher-hero-subtitle,
+  .teacher-hero-year {
+    font-size: 18px;
+  }
+
+  .teacher-book-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+  }
+
+  .teacher-brush-edge {
+    height: 80px;
+  }
+}

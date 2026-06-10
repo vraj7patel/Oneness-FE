@@ -1,0 +1,166 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: -2px; /* Fix for 1px subpixel rendering gap at the top */
+}
+
+.hero-bg-image {
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 146%;
+  position: absolute;
+  top: -378px;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Purple tint similar to the image */
+  background-color: rgba(73, 54, 110, 0.65);
+  z-index: 2;
+}
+
+/* Torn paper edge effect placeholders */
+.brush-edge {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  /* Increased thickness */
+  background-image: url('../../assets/hero-bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+  filter: brightness(0) invert(1);
+  /* Turns the pink image into white */
+}
+
+.top-brush-edge {
+  top: -20px;
+  /* slight overlap to prevent gaps */
+  transform: rotate(180deg);
+  /* flip the brush for the top edge */
+}
+
+.bottom-brush-edge {
+  bottom: -2px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h2 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tickets-text-btn {
+  font-family: 'Irish Grover';
+  font-size: 60px;
+  font-weight: 900;
+  color: #ffaa00;
+  /* Gold/Yellow color */
+  background: none;
+  border: none;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  letter-spacing: 1px;
+  /* 3D Gold text effect */
+  text-shadow:
+    2px 2px 0px #9d5000,
+    3px 3px 0px #9d5000,
+    4px 4px 8px rgba(0, 0, 0, 0.6);
+  /* transition: transform 0.3s ease; */
+}
+
+/* .tickets-text-btn:hover {
+  transform: scale(1.05);
+} */
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .hero-bg-image {
+    top: 0;
+    height: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .tickets-text-btn {
+    font-size: 36px;
+  }
+
+  .top-brush-edge {
+    height: 100px; /* Adjust top brush height slightly if needed, but keep z-index normal */
+  }
+
+  .bottom-brush-edge {
+    bottom: -3px; /* Pushed down more to hide any gap or artifact line */
+    height: 75px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .tickets-text-btn {
+    font-size: 28px;
+  }
+
+  .brush-edge {
+    height: 80px;
+  }
+}

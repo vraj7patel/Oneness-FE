@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.contact-details-section {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.contact-details-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-details-header {
+  margin-bottom: 50px;
+}
+
+.contact-details-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 48px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #CD642D 0%, #71423D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.contact-details-divider {
+  width: 180px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.contact-details-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  line-height: 1.6;
+}
+
+.contact-details-support {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5D4E8C; /* Purple color from image */
+  margin: 0;
+}
+
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.contact-detail-box {
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-detail-box:hover {
+  transform: translateY(-5px);
+}
+
+.detail-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-icon {
+  font-size: 24px;
+}
+
+.detail-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.detail-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 5px 0 10px;
+}
+
+.detail-subtext {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Box Colors */
+.email-box {
+  background-color: #E8E4F0; /* Light purple */
+  border: 2px solid #5D4E8C;
+  color: #5D4E8C;
+}
+
+.phone-box {
+  background-color: #F8E4E4; /* Light red */
+  border: 2px solid #C44D4D;
+  color: #C44D4D;
+}
+
+.location-box {
+  background-color: #FEF3E2; /* Light orange */
+  border: 2px solid #D98C45;
+  color: #D98C45;
+}
+
+.social-box {
+  background-color: #E2F0ED; /* Light green */
+  border: 2px solid #4D8B7A;
+  color: #4D8B7A;
+}
+
+.social-links-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 15px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333333 !important; /* Dark text for all logos */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.social-item:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.social-svg-logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.instagram-logo-svg {
+  color: #E1306C;
+}
+
+.facebook-logo-svg {
+  color: #1877F2;
+}
+
+.youtube-logo-svg {
+  color: #FF0000;
+}
+
+@media (max-width: 768px) {
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-details-title {
+    font-size: 36px;
+  }
+}

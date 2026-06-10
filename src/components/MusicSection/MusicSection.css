@@ -1,0 +1,300 @@
+/* ===== MUSIC SECTION ===== */
+.music-section {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #fdf8f0;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+  padding-bottom: 0;
+}
+
+/* --- Music notes on left & right edges --- */
+.music-notes-left {
+  position: absolute;
+  left: 0;
+  top: 22%;
+  transform: translateY(-60%);
+  width: 180px;
+  height: auto;
+  z-index: 1;
+  opacity: 5.15;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+}
+
+.music-brush-top-img-music {
+  top: -14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 4;
+  width: 101%;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: bottom center;
+  object-position: bottom center;
+  pointer-events: none;
+  rotate: 180deg;
+  /* transform: translateX(-17px) rotate(233deg); */
+  filter: brightness(0) invert(1);
+}
+
+.music-notes-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 140px;
+  height: auto;
+  z-index: 1;
+  opacity: 5.5;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+}
+
+/* --- Container --- */
+.music-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 120px;
+  z-index: 2;
+}
+
+/* --- Title area --- */
+.music-text-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.music-year {
+  color: #3a9e8f;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 28px;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.music-title {
+  color: #2c2c2c;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(24px, 3vw, 38px);
+  margin: 0 0 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.music-divider {
+  width: 280px;
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.music-description {
+  color: #777071;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --- Gallery row --- */
+.music-gallery-row {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* --- Drummer (left character) --- */
+.music-drummer {
+  width: 220px;
+  height: auto;
+  z-index: 3;
+  margin-right: -30px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* --- Frame wrappers --- */
+.music-frame-wrapper {
+  position: relative;
+  width: 380px;
+  height: 470px;
+  flex-shrink: 0;
+  z-index: 2;
+  /* Premium drop shadow following the exact contour of the ornate frame */
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.18));
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  /* Premium SVG Mask Image clipping */
+  mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20540.901%20648%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M483.517%20471.639H490.599C504.756%20471.639%20516.237%20464.057%20516.237%20454.7C516.237%20445.347%20504.761%20437.762%20490.599%20437.762C504.756%20437.762%20516.237%20430.177%20516.237%20420.823C516.237%20411.469%20504.761%20403.885%20490.599%20403.885H477.52V241.805H490.599C504.756%20241.805%20516.237%20234.224%20516.237%20224.867C516.237%20215.513%20504.761%20207.928%20490.599%20207.928C504.756%20207.928%20516.237%20200.343%20516.237%20190.99C516.237%20181.636%20504.761%20174.051%20490.599%20174.051H489.799C554.11%20148.472%20555.13%20103.559%20507.37%2078.2387C437.93%2041.4197%20317.419%2058.5235%20270.449%200C223.479%2058.5268%20102.973%2041.4197%2033.5276%2078.2387C-14.2274%20103.559%20-13.2075%20148.468%2051.0985%20174.051H50.2992C36.1414%20174.051%2024.6611%20181.633%2024.6611%20190.99C24.6611%20200.343%2036.1365%20207.928%2050.2992%20207.928C36.1414%20207.928%2024.6611%20215.51%2024.6611%20224.867C24.6611%20234.22%2036.1365%20241.805%2050.2992%20241.805H63.3781V403.885H50.2992C36.1414%20403.885%2024.6611%20411.469%2024.6611%20420.823C24.6611%20430.177%2036.1365%20437.762%2050.2992%20437.762C36.1414%20437.762%2024.6611%20445.343%2024.6611%20454.7C24.6611%20464.054%2036.1365%20471.639%2050.2992%20471.639H57.3805C-13.0211%20496.736%20-15.7182%20543.65%2033.5227%20569.761C102.963%20606.58%20223.474%20589.476%20270.444%20648C317.414%20589.473%20437.92%20606.577%20507.365%20569.761C556.616%20543.65%20553.919%20496.736%20483.517%20471.639Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20540.901%20648%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M483.517%20471.639H490.599C504.756%20471.639%20516.237%20464.057%20516.237%20454.7C516.237%20445.347%20504.761%20437.762%20490.599%20437.762C504.756%20437.762%20516.237%20430.177%20516.237%20420.823C516.237%20411.469%20504.761%20403.885%20490.599%20403.885H477.52V241.805H490.599C504.756%20241.805%20516.237%20234.224%20516.237%20224.867C516.237%20215.513%20504.761%20207.928%20490.599%20207.928C504.756%20207.928%20516.237%20200.343%20516.237%20190.99C516.237%20181.636%20504.761%20174.051%20490.599%20174.051H489.799C554.11%20148.472%20555.13%20103.559%20507.37%2078.2387C437.93%2041.4197%20317.419%2058.5235%20270.449%200C223.479%2058.5268%20102.973%2041.4197%2033.5276%2078.2387C-14.2274%20103.559%20-13.2075%20148.468%2051.0985%20174.051H50.2992C36.1414%20174.051%2024.6611%20181.633%2024.6611%20190.99C24.6611%20200.343%2036.1365%20207.928%2050.2992%20207.928C36.1414%20207.928%2024.6611%20215.51%2024.6611%20224.867C24.6611%20234.22%2036.1365%20241.805%2050.2992%20241.805H63.3781V403.885H50.2992C36.1414%20403.885%2024.6611%20411.469%2024.6611%20420.823C24.6611%20430.177%2036.1365%20437.762%2050.2992%20437.762C36.1414%20437.762%2024.6611%20445.343%2024.6611%20454.7C24.6611%20464.054%2036.1365%20471.639%2050.2992%20471.639H57.3805C-13.0211%20496.736%20-15.7182%20543.65%2033.5227%20569.761C102.963%20606.58%20223.474%20589.476%20270.444%20648C317.414%20589.473%20437.92%20606.577%20507.365%20569.761C556.616%20543.65%20553.919%20496.736%20483.517%20471.639Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* ONLY image fit inside frame */
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ornate frame border sits on top */
+.music-frame-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* --- Guitarist (right character) --- */
+.music-guitarist {
+  width: 200px;
+  height: auto;
+  z-index: 3;
+  margin-left: -30px;
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+/* --- Explore button --- */
+.music-explore-btn {
+  background-color: #5d4a82;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 36px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(93, 74, 130, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.music-explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(93, 74, 130, 0.45);
+}
+
+/* --- Grass at bottom --- */
+.music-grass {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin-top: -100px;
+}
+
+.music-brush-top-img-grassup {
+  position: relative;
+  z-index: 5;
+  margin-top: -22px;
+  width: 100%;
+  background: transparent;
+  opacity: .9;
+  height: auto;
+  display: block;
+  /* height: 150px; */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .music-drummer {
+    width: 150px;
+    margin-right: 0;
+  }
+
+  .music-guitarist {
+    width: 130px;
+    margin-left: 0;
+  }
+
+  .music-frame-wrapper {
+    width: 290px;
+    height: 358px;
+    transform: none;
+    margin: 0;
+  }
+
+  .music-notes-left {
+    width: 120px;
+  }
+
+  .music-notes-right {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-gallery-row {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .music-drummer {
+    width: 130px;
+    margin-right: 0;
+    order: 1;
+  }
+
+  .music-frame-wrapper {
+    width: 250px;
+    height: 310px;
+    transform: none;
+    margin: 0;
+    order: 2;
+  }
+
+  .music-brush-top-img-grassup {
+    margin-top: -77px;
+  }
+
+  .music-guitarist {
+    width: 110px;
+    margin-left: 0;
+    order: 3;
+  }
+
+  .music-title {
+    font-size: 22px;
+  }
+
+  .music-notes-left,
+  .music-notes-right {
+    display: none;
+  }
+}

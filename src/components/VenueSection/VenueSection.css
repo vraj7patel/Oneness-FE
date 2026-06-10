@@ -1,0 +1,160 @@
+/* ===== VENUE SECTION ===== */
+.venue-section {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 80px 20px 80px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.venue-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  z-index: 10;
+}
+
+/* ===== LEFT CONTENT ===== */
+.venue-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.venue-year {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 900;
+  color: #1a1622;
+  letter-spacing: 3px;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.venue-title {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 900;
+  color: #1a1622;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.venue-divider {
+  width: 240px;
+  height: auto;
+  margin: 0 0 24px;
+  display: block;
+}
+
+.venue-description {
+  font-family: 'Georgia', serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.7;
+  color: #666;
+  margin: 0 0 32px;
+  max-width: 460px;
+}
+
+/* Explore Venue Button */
+.venue-explore-btn {
+  position: relative;
+  background-color: #4B3A70;
+  color: #ffffff;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 13px 30px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 2px #4B3A70;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.venue-explore-btn .corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: -5px;
+}
+
+.venue-explore-btn .corner.top-left {
+  top: -5px;
+}
+
+.venue-explore-btn .corner.bottom-left {
+  bottom: -5px;
+}
+
+.venue-explore-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ===== RIGHT IMAGE ===== */
+.venue-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.venue-image {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .venue-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .venue-left {
+    align-items: center;
+  }
+
+  .venue-description {
+    max-width: 600px;
+  }
+
+  .venue-image {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 520px) {
+  .venue-section {
+    padding: 50px 15px 50px;
+  }
+
+  .venue-divider {
+    width: 200px;
+  }
+
+  .venue-image {
+    max-width: 100%;
+  }
+}

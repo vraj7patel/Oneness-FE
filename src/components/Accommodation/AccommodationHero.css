@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;700;800&family=Roboto+Serif:wght@600&display=swap');
+
+.accommodation-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.accommodation-hero-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Deep reddish overlay exactly matching the reference photo */
+.accommodation-hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* Deep warm red-pink gradient tint with slight dark wash at bottom */
+  /* background: linear-gradient(135deg, rgba(156, 44, 61, 0.85) 0%, rgba(120, 20, 36, 0.8) 50%, rgba(80, 10, 25, 0.9) 100%); */
+  z-index: 2;
+  mix-blend-mode: multiply;
+  /* Creates the authentic rich double-filtered color wash on raw structures */
+}
+
+/* Fallback secondary wash to ensure it perfectly replicates the prompt's crimson style */
+.accommodation-hero-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: color;
+  z-index: 1;
+}
+
+/* Brush Strokes */
+.accommodation-brush-top {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: 5;
+}
+
+.accommodation-brush-bottom {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  /* Seamless blending with the details section background */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+
+/* Content */
+.accommodation-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  max-width: 900px;
+}
+
+.accommodation-subtitle {
+  font-family: 'Roboto Serif';
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: #ffffff;
+   line-height: 1.4;
+  /* Warm Gold contrast */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.accommodation-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: clamp(35px, 5vw, 65px);
+  color: #F8B12F;;
+  margin: 20px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.accommodation-hero-desc {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 750px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 25px;
+}
+
+/* Button with beautiful Oneness styling */
+.accommodation-btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.accommodation-reserve-btn {
+  background-image: url('../../assets/pkg-btn/Group 61.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: #1a1a1a;
+  border: none;
+  padding: 16px 48px;
+  font-family: 'Irish Grover', cursive;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-width: 280px;
+  min-height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.accommodation-reserve-btn:hover {
+  transform: translateY(-3px);
+}
+
+.accommodation-reserve-btn:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* Keyframes for premium feeling transition animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+  .accommodation-hero {
+    height: 65vh;
+  }
+
+  .accommodation-brush-top,
+  .accommodation-brush-bottom {
+    height: 60px;
+  }
+
+  .accommodation-subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .accommodation-hero-desc {
+    margin-bottom: 15px;
+  }
+
+  .accommodation-reserve-btn {
+    padding: 12px 36px;
+    font-size: 16px;
+    min-width: 220px;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accommodation-hero {
+    height: 70vh;
+  }
+
+  .accommodation-subtitle {
+    font-size: 12px;
+  }
+
+  .accommodation-hero-desc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .accommodation-reserve-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    min-width: 190px;
+    min-height: 48px;
+    letter-spacing: 1px;
+  }
+}

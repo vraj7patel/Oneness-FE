@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:wght@400&display=swap');
+
+.location-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  /* Match header white background */
+}
+
+/* Hero Section */
+.location-hero {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  /* Slightly taller to fit content well */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  /* More padding for ripped edges */
+  margin-top: 0;
+}
+
+.location-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(68, 50, 48, 0.75); Restored darker, slightly reddish brown overlay */
+  z-index: 1;
+}
+
+.location-hero-edge {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.location-top-edge {
+  top: -2px;
+  /* Pull up slightly to overlap exactly with header */
+}
+
+.location-bottom-edge {
+  bottom: -2px;
+}
+
+.location-hero-content-wrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  /* Tighter gap between text elements */
+}
+
+.location-hero-title {
+  color: #fff;
+  font-family: 'Irish Grover', cursive;
+  line-height: 88px;
+  /* Based on 84px font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-hero-title .year {
+  font-size: 64px;
+  /* Scaled down slightly relative to main title if needed, or 84px */
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.location-hero-title .main-title {
+  font-size: 84px;
+  /* Exact spec from image */
+  font-weight: 400;
+  color: #fca72a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 5px 0;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+
+.location-hero-title .venue {
+  font-size: 64px;
+  /* Scaled down slightly, adjust if all should be 84px */
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.location-hero-divider {
+  width: 450px;
+  /* Much wider divider line as seen in image */
+  margin-top: 15px;
+}
+
+/* Details Section */
+.location-details-section {
+  padding: 60px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-heading {
+  font-family: 'Irish Grover', cursive;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 900px;
+  margin-bottom:15px;
+
+  /* Text Gradient */
+  background: linear-gradient(180deg, #CD642D, #71423D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-divider {
+  width: 549px;
+  height: 25.53px;
+  margin-bottom: 30px;
+}
+
+/* Google Maps style search box */
+.default-place-card-container {
+  position: absolute;
+  top: 96px;
+  left: 51px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 0 8px;
+  height: 40px;
+  width: 280px;
+  gap: 4px;
+}
+
+.place-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  color: #3c4043;
+  background: transparent;
+  padding: 8px 4px;
+  min-width: 0;
+}
+
+.place-search-input::placeholder {
+  color: #9aa0a6;
+}
+
+.place-search-btn,
+.place-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.place-search-btn:hover,
+.place-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.place-search-btn svg,
+.place-close-btn svg {
+  display: block;
+}
+
+.description-text {
+  font-family: 'Roboto Serif', serif;
+  font-size: 12px;
+  color: #231F1F;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 40px;
+  /* margin: 0 auto 40px; */
+}
+
+.map-wrapper {
+  position: relative;
+  /* Required for absolute positioning of the iframe */
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.real-map-iframe {
+  position: absolute;
+  top: 17%;
+  /* Adjust these percentages to perfectly fit the frame cut-out */
+  left: 4.5%;
+  width: 91%;
+  height: 79%;
+  border: none;
+  border-radius: 8px;
+  /* Slight border radius to match the frame's inner corners */
+  z-index: 2;
+  /* Ensures it sits on top of the image */
+}
+
+.bottom-description-text {
+   font-family: 'Roboto Serif', serif;
+  font-size: 12px;
+  color: #231F1F;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 900px;
+  /* margin-bottom: 40px; */
+  /* margin: 0 auto 40px; */
+}
+
+/* Gallery Section */
+.location-gallery-section {
+  padding: 0 20px 190px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.gallery-item {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .location-hero-title {
+    line-height: 1.2;
+  }
+
+  .location-hero-title .year {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .location-hero-title .main-title {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .location-hero-title .venue {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .location-hero-divider {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    /* Adjusted for mobile slightly, or keep 40px */
+  }
+
+  .section-divider {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .default-place-card-container {
+    top: 20%;
+    left: 8%;
+    width: 84%;
+    max-width: 280px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-gallery-section {
+    padding: 0 20px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-hero {
+    padding: 80px 15px;
+  }
+
+  .location-hero-title .year {
+    font-size: 28px;
+  }
+
+  .location-hero-title .main-title {
+    font-size: 32px;
+  }
+
+  .location-hero-title .venue {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .description-text, .bottom-description-text {
+    line-height: 22px;
+    font-size: 13px;
+  }
+
+  .default-place-card-container {
+    height: 36px;
+    padding: 0 6px;
+  }
+}

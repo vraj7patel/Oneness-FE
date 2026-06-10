@@ -1,0 +1,145 @@
+/* ===== GALLERY SECTION ===== */
+.gallery-section {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, #FAF4E5 0%, #FAF4E5 5%, #ffffff 50%, #ffffff 100%);
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: -40px;
+  margin-bottom: 130px;
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex: 1;
+}
+
+.gallery-item1 {
+  position: relative;
+  width: 24%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.gallery-item1:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-frame {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.gallery-shadow {
+  /* position: absolute;
+  bottom: -15px; Places the ornament at the bottom edge
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none; */
+  position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 105%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gallery-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #A92A40; /* Dark red matching the image */
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(169, 42, 64, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+  z-index: 10;
+  margin: 0 10px;
+}
+
+.gallery-arrow:hover {
+  transform: scale(1.1);
+  background-color: #8c2033;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .gallery-item1 {
+    width: 23%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    gap: 8px;
+    padding: 0 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .gallery-images {
+    flex-wrap: nowrap; /* Strictly force cards side-by-side (no 2x2 grid!) */
+    gap: 12px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery-item1 {
+    display: none; /* Hide images by default on mobile viewports */
+    width: 46%; /* Exactly two fit side-by-side */
+    max-width: 150px; /* Tightly sized so everything fits beautifully with navigation arrows */
+    flex-shrink: 0;
+  }
+  .gallery-item1.mobile-visible {
+    display: flex; /* Show only the active pair */
+    animation: fadeInStay 0.5s ease-out forwards;
+  }
+  .gallery-section {
+    padding: 30px 5px;
+  }
+  .gallery-arrow {
+    width: 34px;
+    height: 34px;
+    margin: 0 4px;
+  }
+}
+
+@keyframes fadeInStay {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

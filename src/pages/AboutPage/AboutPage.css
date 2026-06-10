@@ -1,0 +1,885 @@
+.about-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #71423D;
+  /* overflow-x: hidden; */
+}
+
+/* --- COMMON MASK OVERLAYS --- */
+.mask-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  object-fit: cover;
+}
+
+/* --- HERO SECTION --- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  min-height: 86vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-mask-top {
+  top: -6px;
+}
+
+.about-mask-bottom {
+  bottom: -2px;
+}
+
+/* Hero Content */
+.about-hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.about-hero-content h1 {
+  font-family: 'Irish Grover', cursive;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.about-hero-date {
+  color: #f7a938;
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.4;
+}
+
+/* Floating Flowers */
+.about-flower {
+  position: absolute;
+  width: 40px;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.about-flower-1 {
+  top: -20px;
+  right: -50px;
+}
+
+.about-flower-2 {
+  bottom: -40px;
+  left: -80px;
+}
+
+.about-flower-3 {
+  left: -150px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.about-flower-4 {
+  right: -150px;
+  bottom: 0;
+}
+
+/* --- INTRO CONTENT SECTION --- */
+.about-intro {
+  background-color: #FAF6ED;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about-text-wrapper {
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  position: relative;
+}
+
+.about-text-wrapper p {
+  margin-bottom: 20px;
+}
+
+.about-text-second {
+  margin-top: 40px;
+}
+
+/* --- OUR VISION SECTION --- */
+.about-vision {
+  background-color: #5BA6B0;
+  /* Exact teal */
+  position: relative;
+  padding: 120px 5% 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-vision-mask-top {
+  top: -2px;
+}
+
+.about-vision-mask-bottom {
+  bottom: -2px;
+}
+
+.peacock-feather-about {
+  position: absolute;
+  top: 12%;
+  left: 0px;
+  width: 140px;
+  z-index: 3;
+}
+
+.vision-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  gap: 40px;
+}
+
+.vision-text {
+  flex: 0 1 40%;
+  color: white;
+  text-align: left;
+}
+
+.vision-text h2 {
+  font-family: 'Irish Grover', cursive;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.vision-text p {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* --- Vision Frame (same pattern as music-frame-wrapper) --- */
+.vision-frame-wrapper {
+  position: relative;
+  width: 710px;
+  max-width: 100%;
+  aspect-ratio: 710 / 400;
+  flex-shrink: 0;
+  z-index: 2;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.18));
+  margin-right: -60px;
+  /* Overflow slightly to the right like reference */
+}
+
+.vision-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  /* SVG Mask matching the aspect ratio and shape of Vector (21).png */
+  mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20540.901%20648%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M483.517%20471.639H490.599C504.756%20471.639%20516.237%20464.057%20516.237%20454.7C516.237%20445.347%20504.761%20437.762%20490.599%20437.762C504.756%20437.762%20516.237%20430.177%20516.237%20420.823C516.237%20411.469%20504.761%20403.885%20490.599%20403.885H477.52V241.805H490.599C504.756%20241.805%20516.237%20234.224%20516.237%20224.867C516.237%20215.513%20504.761%20207.928%20490.599%20207.928C504.756%20207.928%20516.237%20200.343%20516.237%20190.99C516.237%20181.636%20504.761%20174.051%20490.599%20174.051H489.799C554.11%20148.472%20555.13%20103.559%20507.37%2078.2387C437.93%2041.4197%20317.419%2058.5235%20270.449%200C223.479%2058.5268%20102.973%2041.4197%2033.5276%2078.2387C-14.2274%20103.559%20-13.2075%20148.468%2051.0985%20174.051H50.2992C36.1414%20174.051%2024.6611%20181.633%2024.6611%20190.99C24.6611%20200.343%2036.1365%20207.928%2050.2992%20207.928C36.1414%20207.928%2024.6611%20215.51%2024.6611%20224.867C24.6611%20234.22%2036.1365%20241.805%2050.2992%20241.805H63.3781V403.885H50.2992C36.1414%20403.885%2024.6611%20411.469%2024.6611%20420.823C24.6611%20430.177%2036.1365%20437.762%2050.2992%20437.762C36.1414%20437.762%2024.6611%20445.343%2024.6611%20454.7C24.6611%20464.054%2036.1365%20471.639%2050.2992%20471.639H57.3805C-13.0211%20496.736%20-15.7182%20543.65%2033.5227%20569.761C102.963%20606.58%20223.474%20589.476%20270.444%20648C317.414%20589.473%20437.92%20606.577%20507.365%20569.761C556.616%20543.65%20553.919%20496.736%20483.517%20471.639Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20540.901%20648%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M483.517%20471.639H490.599C504.756%20471.639%20516.237%20464.057%20516.237%20454.7C516.237%20445.347%20504.761%20437.762%20490.599%20437.762C504.756%20437.762%20516.237%20430.177%20516.237%20420.823C516.237%20411.469%20504.761%20403.885%20490.599%20403.885H477.52V241.805H490.599C504.756%20241.805%20516.237%20234.224%20516.237%20224.867C516.237%20215.513%20504.761%20207.928%20490.599%20207.928C504.756%20207.928%20516.237%20200.343%20516.237%20190.99C516.237%20181.636%20504.761%20174.051%20490.599%20174.051H489.799C554.11%20148.472%20555.13%20103.559%20507.37%2078.2387C437.93%2041.4197%20317.419%2058.5235%20270.449%200C223.479%2058.5268%20102.973%2041.4197%2033.5276%2078.2387C-14.2274%20103.559%20-13.2075%20148.468%2051.0985%20174.051H50.2992C36.1414%20174.051%2024.6611%20181.633%2024.6611%20190.99C24.6611%20200.343%2036.1365%20207.928%2050.2992%20207.928C36.1414%20207.928%2024.6611%20215.51%2024.6611%20224.867C24.6611%20234.22%2036.1365%20241.805%2050.2992%20241.805H63.3781V403.885H50.2992C36.1414%20403.885%2024.6611%20411.469%2024.6611%20420.823C24.6611%20430.177%2036.1365%20437.762%2050.2992%20437.762C36.1414%20437.762%2024.6611%20445.343%2024.6611%20454.7C24.6611%20464.054%2036.1365%20471.639%2050.2992%20471.639H57.3805C-13.0211%20496.736%20-15.7182%20543.65%2033.5227%20569.761C102.963%20606.58%20223.474%20589.476%20270.444%20648C317.414%20589.473%20437.92%20606.577%20507.365%20569.761C556.616%20543.65%20553.919%20496.736%20483.517%20471.639Z%22%20fill%3D%22%23191919%22%2F%3E%0A%3C%2Fsvg%3E");
+
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.vision-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ornate frame border sits on top */
+.vision-frame-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.yoga-poses {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.yoga-icon {
+  position: absolute;
+  object-fit: contain;
+  bottom: 30px;
+}
+
+/* 1st pose — tall colorful backbend, far left */
+.yoga-1 {
+  left: 5%;
+  bottom: 0px;
+  height: 176px;
+}
+
+/* 2nd pose — bending forward, second from left */
+.yoga-2 {
+  left: 16%;
+  bottom: -8px;
+  height: 131px;
+}
+
+/* 3rd pose — sitting meditation (yellow), center-left */
+.yoga-3 {
+  left: 33%;
+  bottom: 27px;
+  height: 131px;
+}
+
+/* 4th pose — small lying pose, far right bottom */
+.yoga-4 {
+  right: 16.8%;
+  bottom: 20px;
+  height: 75.1px;
+}
+
+
+/* --- LIVING IN ALIGNMENT SECTION --- */
+.about-alignment {
+  background-color: #FAF6ED;
+  padding: 80px 0% 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.alignment-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.alignment-header h2 {
+  font-family: 'Irish Grover', cursive;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #B44634;
+  /* Brownish red */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.section-divider {
+  height: 15px;
+  object-fit: contain;
+}
+
+.alignment-content {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.alignment-character-left {
+  position: absolute;
+  left: -8%;
+  bottom: -100px;
+  height: 410px;
+  object-fit: contain;
+  z-index: 4;
+}
+
+.alignment-camels-container {
+  position: absolute;
+  right: 1%;
+  bottom: -35px;
+  width: 320px;
+  height: 320px;
+  z-index: 4;
+}
+
+.alignment-camel-back {
+  position: absolute;
+  top: 0;
+  right: -62%;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+.alignment-camel-front {
+  position: absolute;
+  bottom: -62px;
+  left: 214px;
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+}
+
+.alignment-boxes {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  /* To give space for characters on both sides */
+  z-index: 1;
+}
+
+.alignment-box {
+  background-color: #3b9270;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+  box-shadow: 6px 6px 0px #433367;
+  display: flex;
+  align-items: center;
+}
+
+
+/* --- CARRIED IN UNITY SECTION --- */
+.about-unity {
+  background-color: #FAF6ED;
+  background-size: 100% 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: clamp(520px, 49.25vw, 946px);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: clamp(130px, 12vw, 220px) 5% clamp(96px, 8vw, 150px);
+  overflow: visible;
+}
+
+.unity-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  gap: clamp(48px, 7vw, 120px);
+  position: relative;
+  z-index: 3;
+}
+
+.unity-image {
+  flex: 0 1 520px;
+  display: flex;
+  justify-content: center;
+}
+
+.unity-image img {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: clamp(330px, 33vw, 570px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.2));
+}
+
+.unity-text {
+  flex: 0 1 570px;
+  color: white;
+}
+
+.unity-text h2 {
+  font-family: 'Irish Grover', cursive;
+  font-size: clamp(1.45rem, 2.25vw, 2.7rem);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.unity-divider-wrapper {
+  margin-bottom: 22px;
+}
+
+.unity-divider-wrapper .section-divider {
+  filter: none;
+  width: min(330px, 30vw);
+  height: auto;
+}
+
+.unity-text p {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.82rem, 1vw, 1.05rem);
+  line-height: 1.32;
+  max-width: 560px;
+  margin: 0 0 18px;
+}
+
+
+/* --- OUR APPROACH SECTION --- */
+.about-approach {
+  top: 28px;
+  background-color: #FAF6ED;
+  min-height: 650px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
+  margin-top: calc(clamp(96px, 8vw, 150px) * -1);
+  padding: clamp(92px, 5.3vw, 150px) 0 0;
+}
+
+.approach-header {
+  text-align: center;
+  width: min(100%, 1040px);
+  z-index: 5;
+  position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.approach-year {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(1.25rem, 2.1vw, 2rem);
+  color: #B44634;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.approach-header h2 {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.4vw, 2.3rem);
+  color: #B44634;
+  margin: 0 0 7px;
+  letter-spacing: 1px;
+}
+
+/* Small decorative teal divider line between heading and description */
+.approach-section-divider {
+  display: block;
+  margin: 0 auto 12px;
+  width: min(260px, 36vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.approach-intro-desc {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.78rem, 1vw, 1rem);
+  color: #7a746f;
+  line-height: 1.35;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grid layout — 4 cards overlapping horizontally */
+.approach-grid {
+  position: relative;
+  margin: 38px auto 0;
+  width: 100%;
+  max-width: 1660px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(18px, 4.4vw, 86px);
+  z-index: 3;
+  padding: 0 6% 145px;
+  box-sizing: border-box;
+}
+
+.approach-card {
+  flex: 0 1 365px;
+  width: clamp(190px, 20vw, 365px);
+  aspect-ratio: 465 / 534;
+  height: auto;
+  padding: clamp(76px, 6.5vw, 122px) clamp(24px, 2.4vw, 42px) 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  background-image: url('../../assets/about us/Group 39.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin: 0;
+}
+
+.approach-card:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 15px 25px rgba(180, 70, 52, 0.15));
+}
+
+.approach-card h3 {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-weight: 700;
+  font-size: clamp(0.78rem, 1.05vw, 1.22rem);
+  line-height: 1.3;
+  margin: 0 0 clamp(18px, 2vw, 32px);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.approach-card p {
+  font-family: 'Georgia', serif;
+  font-size: clamp(0.72rem, 0.92vw, 1rem);
+  color: #756d67;
+  line-height: 1.28;
+  margin: 0;
+}
+
+/* Card heading colors */
+.card-workshops h3 {
+  color: #A02D42;
+}
+
+.card-community h3 {
+  color: #3B4E7D;
+}
+
+.card-art h3 {
+  color: #B44634;
+}
+
+.card-facilitators h3 {
+  color: #27725B;
+}
+
+/* Landscape hills overlay at the bottom of the section */
+.approach-landscape {
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  display: block;
+}
+
+/* Camel — left side, vertically centered with cards */
+.approach-camel-left {
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  bottom: auto;
+  width: clamp(78px, 8.5vw, 150px);
+  height: auto;
+  object-fit: contain;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Palace cutout — top right corner, overlapping into section above */
+.approach-palace-right {
+  position: absolute;
+  right: 0;
+  top: -192px;
+  width: clamp(170px, 19vw, 369px);
+  height: auto;
+  object-fit: contain;
+  z-index: 99;
+  pointer-events: none;
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1200px) {
+  .alignment-boxes {
+    width: 65%;
+  }
+
+  .approach-grid {
+    width: 100%;
+    padding: 0 4% 145px;
+    gap: clamp(18px, 3vw, 42px);
+  }
+}
+
+@media (max-width: 992px) {
+  .alignment-character-left {
+    height: 300px;
+    left: 0;
+  }
+
+  .alignment-camels-container {
+    width: 240px;
+    height: 220px;
+    right: 0;
+    bottom: 0;
+  }
+
+  .alignment-camel-back {
+    width: 100px;
+  }
+
+  .alignment-camel-front {
+    width: 170px;
+  }
+
+  .alignment-boxes {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vision-content,
+  .unity-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vision-frame-wrapper {
+    width: 90%;
+    max-width: 550px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  /* Unity responsive */
+  .about-unity {
+    background-image: none;
+    background-color: #C02A3D;
+    /* Crimson Red for mobile */
+    height: auto;
+    min-height: auto;
+    padding: 40px 5% 60px;
+  }
+
+  .unity-image {
+    margin-top: -60px;
+    z-index: 5;
+  }
+
+  .unity-image img {
+    max-width: 440px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Approach responsive */
+  .about-approach {
+    background-image: none !important;
+    min-height: auto;
+    height: auto;
+    padding: 80px 5% 0;
+  }
+
+  .approach-grid {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 0 160px;
+  }
+
+  .approach-card {
+    width: 90vw;
+    max-width: 405px;
+    height: auto;
+    aspect-ratio: 465 / 534;
+    padding: 28% 11% 8%;
+    background-image: url('../../assets/about us/Group 39.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    margin: 0;
+    /* reset negative margins on mobile */
+  }
+
+  .approach-camel-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 20px auto 0;
+    display: block;
+    width: 120px;
+  }
+
+  .approach-palace-right {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 20px auto 0;
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .alignment-content {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero-date {
+    font-size: 1.2rem;
+  }
+
+  .about-flower-1 {
+    right: -20px;
+  }
+
+  .about-flower-2 {
+    left: -20px;
+  }
+
+  .about-flower-3 {
+    left: -20px;
+    top: 10%;
+  }
+
+  .about-flower-4 {
+    right: -20px;
+    bottom: 10%;
+  }
+
+  .about-text-wrapper {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .about-intro {
+    padding: 50px 15px;
+  }
+
+  .yoga-poses {
+    display: none;
+  }
+
+  .alignment-boxes {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .alignment-box {
+    padding: 24px 20px 24px 75px;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .alignment-character-left {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 220px;
+    z-index: 4;
+    display: block;
+  }
+
+  .alignment-camels-container {
+    position: relative;
+    width: 260px;
+    height: 240px;
+    margin: 20px auto 0;
+    display: block;
+    bottom: 0;
+    right: 0;
+  }
+
+  .alignment-camel-back {
+    width: 110px;
+  }
+
+  .alignment-camel-front {
+    width: 190px;
+  }
+
+  .vision-frame-wrapper {
+    width: 95%;
+    max-width: 450px;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .unity-image {
+    margin-top: -50px;
+  }
+
+  .unity-image img {
+    max-width: 350px;
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .approach-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .yoga-poses {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: 900px;
+    gap: 30px;
+    padding: 0 4% 100px;
+  }
+
+  .approach-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
+}

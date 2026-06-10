@@ -1,0 +1,71 @@
+.team-info-section {
+  width: 100%;
+  padding: 80px 20px 100px;
+  background-color: #ffffff;
+  /* Off-white textured paper look */
+  /* If you have a texture image, you can add it here: background-image: url('...'); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-info-container {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-info-year,
+.team-info-title {
+  font-family: 'Irish Grover', cursive;
+  color: #AF4935;
+  /* Earthy rust/maroon color */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.team-info-year {
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 5px;
+}
+
+.team-info-title {
+  font-size: clamp(28px, 5vw, 42px);
+  letter-spacing: 1px;
+}
+
+.team-info-separator-container {
+  margin: 25px 0 35px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.team-info-separator {
+  max-width: 500px;
+  width: 50%;
+  height: auto;
+}
+
+.team-info-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.8;
+  color: #4A4640;
+  /* Dark brownish-gray for good readability on off-white */
+  margin: 0;
+  text-align: center;
+  max-width: 850px;
+}
+
+@media (max-width: 768px) {
+  .team-info-section {
+    padding: 60px 15px 80px;
+  }
+
+  .team-info-separator-container {
+    margin: 20px 0 25px;
+  }
+}

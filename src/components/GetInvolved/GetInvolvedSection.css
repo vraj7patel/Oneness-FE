@@ -1,0 +1,330 @@
+.gi-section {
+  position: relative;
+  padding: 48px 0 calc(180px + min(22vw, 160px));
+  margin-top: -2px;
+  z-index: 2;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+.gi-paper-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(255, 255, 255, 0.65) 0%, transparent 55%),
+    radial-gradient(circle at 12% 40%, rgba(252, 245, 235, 0.9) 0%, transparent 42%),
+    radial-gradient(circle at 92% 55%, rgba(248, 238, 228, 0.85) 0%, transparent 38%),
+    repeating-linear-gradient(-11deg, rgba(210, 190, 165, 0.035) 0 1px, transparent 1px 12px);
+}
+
+.gi-mandala {
+  position: absolute;
+  top: 1%;
+  width: min(45vw, 450px);
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+  object-fit: contain;
+  z-index: 5;
+}
+
+.gi-mandala--left {
+  left: -15%;
+}
+
+.gi-mandala--right {
+  right: -15%;
+  transform: scaleX(-1);
+}
+
+.gi-section-inner {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 800px);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 28px);
+}
+
+.gi-intro {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.gi-header-image {
+  display: block;
+  width: min(360px, 92vw);
+  height: auto;
+  margin: 0 auto 24px;
+}
+
+/* Title styles replaced by image */
+
+.gi-intro-copy {
+  margin: 0;
+  font-family: 'Roboto Serif', Georgia, serif;
+  font-size: clamp(16px, 3.5vw, 17px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4a403a;
+  max-width: 800px;
+  /* Increased to fit 2 lines on larger screens */
+  margin-inline: auto;
+  text-align: center;
+}
+
+.gi-form-stage {
+  position: relative;
+}
+
+.gi-form-note {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3d3530;
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  background: #fdf8f1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.gi-form-note a {
+  color: #4b3067;
+  font-weight: 600;
+}
+
+.gi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gi-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gi-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.gi-field--full {
+  grid-column: 1 / -1;
+}
+
+.gi-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #2c2622;
+}
+
+.gi-field input,
+.gi-field select,
+.gi-field textarea {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: #fdf8f1;
+  color: #1c1714;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gi-field input::placeholder,
+.gi-field textarea::placeholder {
+  color: #9c9590;
+}
+
+.gi-field input:focus,
+.gi-field select:focus,
+.gi-field textarea:focus {
+  outline: none;
+  border-color: #4b3067;
+  box-shadow: 0 0 0 2px rgba(75, 48, 103, 0.18);
+}
+
+.gi-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%23504048' d='M1 1l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.gi-field textarea {
+  resize: vertical;
+  min-height: 128px;
+}
+
+.gi-submit-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.gi-submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  height: 58px;
+  padding: 0 40px;
+  border: none;
+  cursor: pointer;
+  background-image: url('../../assets/pkg-btn/Group 58.png');
+  background-size: 100% 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+  overflow: visible;
+  /* To let ornaments peak out */
+}
+
+.gi-submit:hover {
+  transform: translateY(-2px);
+}
+
+
+.gi-submit:active {
+  transform: translateY(0px);
+}
+
+.gi-ornament-top,
+.gi-ornament-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0;
+  pointer-events: none;
+}
+
+.gi-ornament-top {
+  top: -2px;
+}
+
+.gi-ornament-bottom {
+  bottom: -2px;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.gi-btn-ornament {
+  opacity: 0.5;
+}
+
+.gi-submit-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.gi-submit-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gi-submit-arrow {
+  flex-shrink: 0;
+}
+
+.gi-form-footnote {
+  margin: 26px 0 0;
+  font-family: 'Roboto Serif', serif;
+  font-size: clamp(15px, 3.8vw, 19px);
+  line-height: 1.55;
+  text-align: center;
+  color: #4f4742;
+}
+
+.gi-form-footnote a {
+  color: #4b3067;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Footer: brush strip + purple silhouette (matches gi-brush-edge pattern) */
+.gi-footer-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.gi-footer-brush-edge {
+  height: clamp(56px, 10vw, 88px);
+  margin-bottom: -3px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  filter: brightness(0) invert(1);
+  opacity: 0.97;
+}
+
+.gi-desert-svg {
+  display: block;
+  width: 100%;
+  height: clamp(100px, 18vw, 200px);
+  min-height: 100px;
+}
+
+@media (max-width: 640px) {
+  .gi-mandala {
+    display: none;
+  }
+
+  .gi-section {
+    padding: 36px 0 calc(160px + min(28vw, 140px));
+  }
+
+  .gi-field-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gi-submit {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .gi-title-divider {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .gi-mandala {
+    opacity: 0.55;
+    width: min(44vw, 240px);
+  }
+
+  .gi-mandala--left {
+    left: -18%;
+  }
+
+  .gi-mandala--right {
+    right: -18%;
+  }
+}

@@ -1,0 +1,259 @@
+/* ===== DISCOVER JAIPUR SECTION ===== */
+.discover-jaipur-section {
+  /* top: -63; */
+  position: relative;
+  width: 100%;
+  background-color: #FAF4E5;
+  /* Warm cream/ivory background matching the mockup */
+  padding: 50px 20px 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: -60px;
+}
+
+/* Paint brush transition divider */
+.dj-brush-top {
+  position: absolute;
+  top: -89px;
+  /* Shift up to overlay stay section's bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 101%;
+  height: 90px;
+  background-color: #faf8f0;
+  -webkit-mask-image: url('../../assets/homepage/dvider_20 2 (1).png');
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url('../../assets/homepage/dvider_20 2 (1).png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Top paint brush transition image */
+.dj-top {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Container */
+.dj-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Column: Palace Illustration */
+.dj-left {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.dj-palace-img {
+  width: 110%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-left: -57px;
+  margin-top: 20px;
+}
+
+/* Right Column: Content and Text */
+.dj-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: -150px;
+  /* Pulls the text block more towards the center */
+  margin-top: -200px;
+  /* Moves the text block up */
+  z-index: 2;
+  padding-right: 40px;
+}
+
+/* Rickshaw Icon */
+.dj-rickshaw-icon {
+  width: 90px;
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Title */
+.dj-title {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(32px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2F302D;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+/* Divider flourish */
+.dj-divider {
+  width: 300px;
+  height: auto;
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* Lead text/Subtitle */
+.dj-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #333333;
+  margin: 0 0 24px;
+  max-width: 560px;
+}
+
+/* Paragraphs */
+.dj-description {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 20px;
+  max-width: 560px;
+}
+
+.dj-description:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* CTA Button Container */
+.dj-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Learn more button styling matching mockup */
+.dj-explore-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 0 40px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: none;
+  min-width: 300px;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.dj-explore-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.dj-explore-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .dj-container {
+    gap: 40px;
+    padding: 0 15px;
+  }
+
+  .dj-palace-img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-jaipur-section {
+    padding: 70px 15px;
+  }
+
+  .dj-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .dj-left {
+    justify-content: center;
+  }
+
+  .dj-palace-img {
+    width: 100% !important;
+    max-width: 460px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    transform: scale(1.2);
+    /* Scales up the palace building equally from the center */
+  }
+
+  .dj-right {
+    max-width: 500px;
+    margin-left: 0;
+    margin-top: -125px;
+    padding-right: 0;
+  }
+
+  .dj-rickshaw-icon {
+    width: 80px;
+  }
+
+  .dj-explore-btn {
+    min-width: 290px;
+    min-height: 54px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discover-jaipur-section {
+    padding: 50px 10px;
+  }
+
+  .dj-palace-img {
+    width: 125% !important;
+    max-width: 122% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    transform: scale(1.35);
+    margin-top: -44px;
+  }
+
+  .dj-rickshaw-icon {
+    width: 70px;
+  }
+
+  .dj-explore-btn {
+    min-width: 270px;
+    min-height: 50px;
+    font-size: 11px;
+  }
+}

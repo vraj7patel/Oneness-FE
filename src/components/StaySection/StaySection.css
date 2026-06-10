@@ -1,0 +1,532 @@
+/* ===== STAY CLOSE TO THE FESTIVAL SECTION ===== */
+.stay-section {
+  position: relative;
+  width: 103%;
+  max-width: 1957.49px;
+  margin: -120px auto 0;
+  /* Pulls the entire background image upward */
+  min-height: 1680px;
+  /* Increased min-height to give background massive height */
+  padding: 1px 20px 400px;
+  /* Increased bottom padding to stretch background height further */
+  overflow: hidden;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CONTAINER ===== */
+.stay-container {
+  top: 0;
+  /* Reset top offset so it is not pulled into the white area */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  /* Raised z-index to stay on top of the camels illustration layer */
+}
+
+/* ===== HEADER ===== */
+.stay-header {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stay-year {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0 0 6px;
+  color: #ffffff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.stay-title {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.stay-title-divider {
+  width: 280px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.stay-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.7;
+  font-weight: 400;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== HOTELS GRID ===== */
+.stay-hotels-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  margin: 40px 0 40px;
+}
+
+/* ===== INDIVIDUAL HOTEL CARD ===== */
+.stay-hotel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stay-hotel-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Frame + Image Container */
+.stay-hotel-frame-wrap {
+  position: relative;
+  width: 240px;
+  height: 260px;
+  margin-bottom: 16px;
+}
+
+/* The actual hotel image — clipped to match frame shape */
+.stay-hotel-img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* -webkit-mask-size: 100% 100%; */
+  /* -webkit-mask-repeat: no-repeat; */
+  /* mask-size: 100% 100%; */
+  /* mask-repeat: no-repeat; */
+
+  z-index: 1;
+  top: 21px;
+}
+
+/* The Vector frame overlay */
+.stay-hotel-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Hotel Name */
+.stay-hotel-name {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Star Rating */
+.stay-hotel-stars {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.stay-hotel-stars .star {
+  color: #f7ab36;
+  font-size: 14px;
+}
+
+/* Hotel Description/Address */
+.stay-hotel-desc {
+  font-family: 'Georgia', serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+/* ===== CTA BUTTON ===== */
+.stay-cta-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+.stay-explore-btn {
+  position: relative;
+  background: linear-gradient(135deg, #e8a030 0%, #d4912a 50%, #c07e22 100%);
+  color: #1a1510;
+  border: 2px solid #c8872a;
+  padding: 14px 40px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Corner ornaments on button */
+.stay-explore-btn::before,
+.stay-explore-btn::after {
+  content: '✦';
+  position: absolute;
+  color: #4B3A70;
+  font-size: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stay-explore-btn::before {
+  left: 12px;
+}
+
+.stay-explore-btn::after {
+  right: 12px;
+}
+
+.stay-explore-btn:hover {
+  transform: scale(1.03) translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.stay-explore-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== BOTTOM NOTE ===== */
+.stay-bottom-note {
+  font-family: 'Georgia', serif;
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  max-width: 700px;
+  margin: 10px auto 0;
+  font-style: italic;
+}
+
+/* ===== BOTTOM BRUSH TRANSITION ===== */
+.stay-bottom-brush {
+  position: absolute;
+  bottom: 57px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 11;
+  pointer-events: none;
+}
+
+/* ===== CAROUSEL NAVIGATION BUTTONS ===== */
+.stay-carousel-btn {
+  display: none;
+  /* Hidden on desktop view */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .stay-section {
+    width: 100%;
+    min-height: auto;
+    background-size: cover;
+    background-position: center;
+    margin-top: -90px;
+    /* Pulls background up on tablet */
+    padding: 230px 15px 60px;
+    /* Pushes text down on tablet */
+  }
+
+  .stay-hotels-grid {
+    gap: 30px;
+  }
+
+  .stay-hotel-card {
+    width: 240px;
+  }
+
+  .stay-hotel-frame-wrap {
+    width: 200px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stay-section {
+    margin-top: -70px;
+    /* Pulls background up on mobile */
+    padding: 200px 15px 280px;
+    /* Increased bottom padding to push container above camels illustration */
+  }
+
+  .stay-bottom-brush {
+    bottom: 5px;
+    /* Pushed the camels image down to the very bottom on mobile view */
+  }
+
+  .stay-hotels-grid {
+    flex-direction: row;
+    /* Horizontal layout for 2 cards */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    /* Minimized gap to allow maximum card width */
+    min-height: 330px;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto 0;
+    padding: 0 10px;
+    /* Minimized side paddings to maximize card width */
+    box-sizing: border-box;
+  }
+
+  .stay-hotel-card {
+    display: none;
+    /* Hide cards by default */
+    width: 200px;
+    /* Super-sized card width to occupy maximum screen area */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .stay-hotel-card.mobile-visible {
+    display: flex;
+    /* Show only the active pair */
+    opacity: 1;
+    animation: fadeInStay 0.5s ease-out forwards;
+  }
+
+  .stay-hotel-frame-wrap {
+    width: 175px;
+    /* Super-sized frame wrap width */
+    height: 185px;
+    /* Super-sized frame wrap height */
+    margin-bottom: 10px;
+  }
+
+  .stay-hotel-img {
+    top: 15px;
+  }
+
+  .stay-hotel-name {
+    font-size: 13.5px;
+    margin: 0 0 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .stay-hotel-stars {
+    margin-bottom: 4px;
+    gap: 2px;
+  }
+
+  .stay-hotel-stars .star {
+    font-size: 9px;
+  }
+
+  .stay-hotel-desc {
+    font-size: 10.5px;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  /* Carousel Navigation Buttons overlaying the edges */
+  .stay-carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(75, 58, 112, 0.9);
+    /* Solid dark purple overlay */
+    border: 1.5px solid #f7ab36;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: #f7ab36;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 25;
+    /* Float on top of the cards */
+    position: absolute;
+    top: 92px;
+    /* Perfectly centered on overlay frame height (185px / 2 = 92.5px) */
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    line-height: 1;
+  }
+
+  .stay-carousel-btn:active {
+    transform: translateY(-50%) scale(0.9);
+    background-color: rgba(247, 171, 54, 0.5);
+  }
+
+  .stay-carousel-btn.prev-btn {
+    left: -10px;
+    /* Overlap slightly on the left edge */
+  }
+
+  .stay-carousel-btn.next-btn {
+    right: -10px;
+    /* Overlap slightly on the right edge */
+  }
+
+  .stay-explore-btn {
+    font-size: 12px;
+    padding: 12px 30px;
+  }
+
+  .stay-bottom-note {
+    color: #1a1622 !important;
+    /* Deep dark charcoal for maximum contrast on the light camel background */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    /* Soft white outline shadow for 100% legibility */
+    max-width: 600px;
+    margin: 15px auto 0;
+  }
+}
+
+/* ===== CAROUSEL INDICATORS & TRANSITIONS ===== */
+.stay-carousel-indicators {
+  display: none;
+  /* Hidden on desktop */
+}
+
+@media (max-width: 768px) {
+  .stay-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    z-index: 10;
+  }
+
+  .stay-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .stay-indicator-dot.active {
+    background-color: #f7ab36;
+    /* Golden indicator color */
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(247, 171, 54, 0.7);
+  }
+}
+
+@keyframes fadeInStay {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .stay-section {
+    margin-top: -50px;
+    /* Pulls background up on small mobile */
+    padding: 170px 15px 200px;
+    /* Increased bottom padding on small screens */
+  }
+
+  .stay-title-divider {
+    width: 200px;
+  }
+
+  .stay-hotels-grid {
+    max-width: 440px;
+    /* Tighter fit for narrow mobile screens */
+    padding: 0 8px;
+    /* Zero side space wastage */
+    gap: 6px;
+    /* Near-zero gap between cards */
+  }
+
+  .stay-hotel-card {
+    width: 175px;
+    /* Extremely large card width on standard small mobile screen */
+  }
+
+  .stay-hotel-frame-wrap {
+    width: 150px;
+    height: 160px;
+  }
+
+  .stay-hotel-img {
+    top: 13px;
+  }
+
+  /* Adjust arrow button vertical centering and overlay overlap */
+  .stay-carousel-btn {
+    top: 80px;
+    /* Centered relative to new 160px frame height */
+  }
+
+  .stay-carousel-btn.prev-btn {
+    left: -12px;
+  }
+
+  .stay-carousel-btn.next-btn {
+    right: -12px;
+  }
+
+  .stay-explore-btn {
+    font-size: 11px;
+    padding: 11px 20px;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,117 @@
+.dev-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  padding: 60px 20px;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.dev-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(145, 139, 174, 0.15);
+  border-radius: 12px;
+  padding: 45px 35px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+.dev-icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(181, 69, 27, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dev-icon {
+  width: 36px;
+  height: 36px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.dev-title {
+  font-family: "Irish Grover", cursive;
+  font-size: 32px;
+  color: #B5451B;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.dev-divider {
+  width: 200px;
+  height: auto;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.dev-text-main {
+  font-family: "Roboto Serif", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7D4F38;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.dev-text-sub {
+  font-family: "Roboto Serif", serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.dev-btn {
+  background-image: url('../../assets/pkg-btn/Group 58.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px 30px;
+  font-family: "Irish Grover", cursive;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  min-width: 180px;
+  min-height: 48px;
+  transition: transform 0.2s ease;
+  text-transform: uppercase;
+}
+
+.dev-btn:hover {
+  transform: translateY(-2px);
+}
